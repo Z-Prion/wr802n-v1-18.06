@@ -20,9 +20,9 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/Z-Prion/wr802n-openwrt18.06.git
+  REPO_URL: https://github.com/coolsnowwolf/lede.git
   # https://github.com/Z-Prion/lede
-  REPO_BRANCH: master
+  REPO_BRANCH: 20200915
   # master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -64,7 +64,9 @@ jobs:
         # git clone https://github.com/BoringCat/luci-app-mentohust.git openwrt/package/luci-app-mentohust
         # 
         # git clone https://gitee.com/zprion/pcre.git openwrt/package/libs/pcre
-        # rm -rf openwrt/target/linux/ar71xx/image/tiny-tp-link.mk
+        rm -rf openwrt/target/linux/ar71xx/image/tiny-tp-link.mk
+        git clone https://gitee.com/zprion/tiny.git openwrt/test
+        cp openwrt/test/tiny-tp-link.mk openwrt/target/linux/ar71xx/image
         # rm -rf openwrt/package/network/utils/iproute2/Makefile
         # rm -rf openwrt/include/target.mk
         # rm -rf openwrt/package/libs/nettle              
