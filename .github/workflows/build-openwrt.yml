@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/Z-Prion/wr802N-lede.git
+  REPO_URL: https://github.com/coolsnowwolf/lede.git
   # https://github.com/Z-Prion/lede
   REPO_BRANCH: master
   # master
@@ -71,12 +71,12 @@ jobs:
         # git clone https://gitee.com/zprion/nettle.git openwrt/package/libs/nettle
         # git clone https://gitee.com/zprion/libcap.git openwrt/package/network/utils/iproute2/test
         # mv openwrt/package/network/utils/iproute2/test/Makefile  openwrt/package/network/utils/iproute2
-        # git clone https://gitee.com/zprion/lede-20200416.git openwrt/target/linux/ar71xx/image/test
+        git clone https://gitee.com/zprion/lede-20200416.git openwrt/target/linux/ar71xx/image/test
         # git clone https://gitee.com/zprion/git-libcap.git openwrt/package/libs/libcap
         # mv openwrt/package/libs/libcap/target.mk openwrt/include
-        # cd openwrt/target/linux/ar71xx/image/test
-        # mv tiny-tp-link.mk ..
-        # cd
+        cd openwrt/target/linux/ar71xx/image/test
+        mv tiny-tp-link.mk ..
+        cd
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         
     - name: Load custom feeds
