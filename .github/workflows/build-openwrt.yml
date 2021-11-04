@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/Z-Prion/wr802n-lede17.01.git
+  REPO_URL: https://github.com/Z-Prion/wr802n-openwrt18.06.git
   # https://github.com/Z-Prion/lede
   REPO_BRANCH: master
   # master
